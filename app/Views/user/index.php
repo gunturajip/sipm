@@ -236,13 +236,17 @@ foreach ($user as $row) {
 ?>
 
 <div class="container">
-  <a href="<?= base_url("user/create"); ?>" class="my-4 btn btn-primary">Tambah User</a>
+  <a href="<?= base_url("user/create"); ?>" class="my-4 btn btn-primary"><i class="bi bi-plus-square"></i> User</a>
 
-  <table class="table table-striped table-hover shadow rounded overflow-hidden">
+  <table class="table table-striped table-hover shadow rounded overflow-hidden mw-100">
     <tr>
       <th>No</th>
+      <th>Nama</th>
       <th>Email</th>
       <th>Password</th>
+      <th>Tanggal Lahir</th>
+      <th>Jenis Kelamin</th>
+      <th>Foto Profil</th>
       <th>Aksi</th>
     </tr>
     <?php
@@ -250,11 +254,15 @@ foreach ($user as $row) {
     ?>
       <tr>
         <td><?= $row->id; ?></td>
+        <td><?= $row->nama; ?></td>
         <td><?= $row->email; ?></td>
         <td><?= $row->password; ?></td>
+        <td><?= $row->tanggal_lahir; ?></td>
+        <td><?= $row->jenis_kelamin; ?></td>
+        <td><?= $row->foto_profil; ?></td>
         <td>
-          <a title="Edit" href="<?= base_url("user/edit/$row->id"); ?>" class="btn btn-primary">Edit</a>
-          <a title="Delete" href="<?= base_url("user/delete/$row->id"); ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data?')">Hapus</a>
+          <a title="Edit" href="<?= base_url("user/edit/$row->id"); ?>" class="btn btn-primary"><i class="bi bi-pencil"></i></a>
+          <a title="Delete" href="<?= base_url("user/delete/$row->id"); ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data?')"><i class="bi bi-trash3"></i></a>
         </td>
       </tr>
     <?php
