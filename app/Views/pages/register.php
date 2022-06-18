@@ -6,14 +6,14 @@
         <div class="col">
             <div class="shadow-sm rounded overflow-hidden p-4">
                 <div class="pb-4 text-center fw-bold fs-3">Buat Akun Gratismu untuk Tingkatkan Skill Matematikamu</div>
-                <form action="" method="post">
+                <form action="<?= base_url("user/insert") ?>" method="post">
                     <div class="mb-4">
                         <label for="email" class="form-label fw-bold">Alamat Email</label>
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" class="form-control" id="email" name="email">
                     </div>
                     <div class="mb-4">
                         <label for="password" class="form-label fw-bold">Password</label>
-                        <input type="password" class="form-control" id="password">
+                        <input type="password" class="form-control" id="password" name="password">
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Daftar</button>
                 </form>

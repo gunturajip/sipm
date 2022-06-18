@@ -40,7 +40,7 @@ $routes->get('/about', 'Pages::about');
 $routes->get('/login', 'Pages::login');
 $routes->get('/register', 'Pages::register');
 
-$routes->get('/mahasiswa', 'Mahasiswa::index');
+$routes->get('/user', 'User::index');
 
 /*
  * --------------------------------------------------------------------

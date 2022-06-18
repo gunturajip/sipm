@@ -229,34 +229,32 @@
 
 <?= $this->section('content'); ?>
 <?php
-foreach ($mahasiswa as $row) {
-  $id_mahasiswa[] = $row->id;
-  $nama_mahasiswa[] = $row->nama;
+foreach ($user as $row) {
+  $id_user[] = $row->id;
+  $email_user[] = $row->email;
 }
 ?>
 
 <div class="container">
-  <a href="<?= base_url("mahasiswa/create"); ?>" class="my-4 btn btn-primary">Tambah</a>
+  <a href="<?= base_url("user/create"); ?>" class="my-4 btn btn-primary">Tambah User</a>
 
   <table class="table table-striped table-hover shadow rounded overflow-hidden">
     <tr>
       <th>No</th>
-      <th>NPM</th>
-      <th>Nama</th>
-      <th>Alamat</th>
+      <th>Email</th>
+      <th>Password</th>
       <th>Aksi</th>
     </tr>
     <?php
-    foreach ($mahasiswa as $row) {
+    foreach ($user as $row) {
     ?>
       <tr>
         <td><?= $row->id; ?></td>
-        <td><?= $row->npm; ?></td>
-        <td><?= $row->nama; ?></td>
-        <td><?= $row->alamat; ?></td>
+        <td><?= $row->email; ?></td>
+        <td><?= $row->password; ?></td>
         <td>
-          <a title="Edit" href="<?= base_url("mahasiswa/edit/$row->id"); ?>" class="btn btn-primary">Edit</a>
-          <a title="Delete" href="<?= base_url("mahasiswa/delete/$row->id"); ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data?')">Hapus</a>
+          <a title="Edit" href="<?= base_url("user/edit/$row->id"); ?>" class="btn btn-primary">Edit</a>
+          <a title="Delete" href="<?= base_url("user/delete/$row->id"); ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data?')">Hapus</a>
         </td>
       </tr>
     <?php
@@ -311,10 +309,10 @@ foreach ($mahasiswa as $row) {
     var lineChart = new Chart(linectx, {
       type: 'line',
       data: {
-        labels: <?= json_encode($nama_mahasiswa); ?>,
+        labels: <?= json_encode($email_user); ?>,
         datasets: [{
-          label: 'ID Mahasiswa',
-          data: <?= json_encode($id_mahasiswa); ?>,
+          label: 'ID user',
+          data: <?= json_encode($id_user); ?>,
           backgroundColor: "hsl(252, 82.9%, 67.8%)",
           borderColor: "hsl(252, 82.9%, 67.8%)"
         }]
@@ -328,10 +326,10 @@ foreach ($mahasiswa as $row) {
     var barChart = new Chart(barctx, {
       type: 'bar',
       data: {
-        labels: <?= json_encode($nama_mahasiswa); ?>,
+        labels: <?= json_encode($email_user); ?>,
         datasets: [{
-          label: 'ID Mahasiswa',
-          data: <?= json_encode($id_mahasiswa); ?>,
+          label: 'ID user',
+          data: <?= json_encode($id_user); ?>,
           backgroundColor: "hsl(252, 82.9%, 67.8%)",
           borderColor: "hsl(252, 82.9%, 67.8%)"
         }]
@@ -345,10 +343,10 @@ foreach ($mahasiswa as $row) {
     var pieChart = new Chart(piectx, {
       type: 'pie',
       data: {
-        labels: <?= json_encode($nama_mahasiswa); ?>,
+        labels: <?= json_encode($email_user); ?>,
         datasets: [{
-          label: 'ID Mahasiswa',
-          data: <?= json_encode($id_mahasiswa); ?>,
+          label: 'ID user',
+          data: <?= json_encode($id_user); ?>,
           backgroundColor: [
             "rgb(101, 143, 241)",
             "rgb(164, 101, 241)"
@@ -365,10 +363,10 @@ foreach ($mahasiswa as $row) {
     var doughnutChart = new Chart(doughnutctx, {
       type: 'doughnut',
       data: {
-        labels: <?= json_encode($nama_mahasiswa); ?>,
+        labels: <?= json_encode($email_user); ?>,
         datasets: [{
-          label: 'ID Mahasiswa',
-          data: <?= json_encode($id_mahasiswa); ?>,
+          label: 'ID user',
+          data: <?= json_encode($id_user); ?>,
           backgroundColor: [
             "rgb(101, 143, 241)",
             "rgb(164, 101, 241)"

@@ -25,7 +25,7 @@
                         <a class="nav-link <?= $title === 'About' ? 'active' : '' ?>" href="/about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?= $title === 'Mahasiswa' ? 'active' : '' ?>" href="/mahasiswa">Mahasiswa</a>
+                        <a class="nav-link <?= $title === 'User' ? 'active' : '' ?>" href="/user">User</a>
                     </li>
                     <li class="nav-item">
                         <a href="/login" class="btn btn-primary d-lg-none">Get Started</a>
