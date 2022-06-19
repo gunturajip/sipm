@@ -44,6 +44,16 @@ $routes->get('/user', 'User::index');
 
 $routes->get('/admin', 'Admin::index');
 
+$routes->get('/bab', 'Bab::index');
+
+$routes->get('/materi', 'Materi::index');
+
+$routes->get('/rekam_belajar', 'Rekam_belajar::index');
+
+$routes->get('/soal', 'Soal::index');
+
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

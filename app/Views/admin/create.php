@@ -2,8 +2,8 @@
 
 <?= $this->section('content'); ?>
 <div class="container">
-    <b>Tambah Data User</b>
-    <form action="<?= base_url("user/insert") ?>" method="post">
+    <b>Tambah Data Admin</b>
+    <form action="<?= base_url("admin/insert") ?>" method="post">
         <table>
             <tr>
                 <td>Email </td>

@@ -2,18 +2,18 @@
 
 <?= $this->section('content'); ?>
 <div class="container">
-    <b>Tambah Data User</b>
-    <form action="<?= base_url("user/insert") ?>" method="post">
+    <b>Tambah Data Bab</b>
+    <form action="<?= base_url("bab/insert") ?>" method="post">
         <table>
             <tr>
-                <td>Email </td>
+                <td>Nama </td>
                 <td>:</td>
-                <td><input type="text" id="email" name="email"></td>
+                <td><input type="text" id="nama" name="nama"></td>
             </tr>
             <tr>
-                <td>Password </td>
+                <td>ID Admin </td>
                 <td>:</td>
-                <td><input type="text" id="password" name="password"></td>
+                <td><input type="number" id="admin_id" name="admin_id"></td>
             </tr>
             <tr>
                 <td colspan="3"><input type="submit" value="Tambah"></td>
