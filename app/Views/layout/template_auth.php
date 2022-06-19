@@ -18,9 +18,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div>
-                <i class="bi bi-bell me-4"></i>
-                <i class="bi bi-gear me-4"></i>
-                <a href="/login" class="text-decoration-none text-black"><i class=" bi bi-person-circle"></i> <i class="bi bi-chevron-down"></i></a>
+                <i class="me-4 bi bi-bell fs-5 hover:btn btn-primary"></i>
+                <i class="me-4 bi bi-gear fs-5 hover:btn btn-primary"></i>
+                <a href="/login" class="text-decoration-none text-black"><i class=" bi bi-person-circle fs-5 hover:btn btn-primary"></i></a>
             </div>
         </div>
     </nav>
@@ -31,32 +31,32 @@
                 <div class="pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="<?= base_url("admin"); ?>">
+                            <a class="nav-link <?= $title === 'Admin' ? 'mx-2 btn btn-primary text-white' : 'active' ?>" href="<?= base_url("admin"); ?>">
                                 <i class="bi bi-house-heart fs-3"></i> Dashboard
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url("user"); ?>">
+                            <a class="nav-link <?= $title === 'User' ? 'mx-2 btn btn-primary text-white' : 'active' ?>" href="<?= base_url("user"); ?>">
                                 <i class="bi bi-people-fill fs-3"></i> User
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url("bab"); ?>">
+                            <a class="nav-link <?= $title === 'Bab' ? 'mx-2 btn btn-primary text-white' : 'active' ?>" href="<?= base_url("bab"); ?>">
                                 <i class="bi bi-journals fs-3"></i> Bab
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url("materi"); ?>">
+                            <a class="nav-link <?= $title === 'Materi' ? 'mx-2 btn btn-primary text-white' : 'active' ?>" href="<?= base_url("materi"); ?>">
                                 <i class="bi bi-journal-text fs-3"></i> Materi
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url("soal"); ?>">
+                            <a class="nav-link <?= $title === 'Soal' ? 'mx-2 btn btn-primary text-white' : 'active' ?>" href="<?= base_url("soal"); ?>">
                                 <i class="bi bi-list-task fs-3"></i> Soal
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url("rekam_belajar"); ?>">
+                            <a class="nav-link <?= $title === 'Rekam Belajar' ? 'mx-2 btn btn-primary text-white' : 'active' ?>" href="<?= base_url("rekam_belajar"); ?>">
                                 <i class="bi bi-card-checklist fs-3"></i> Rekam Belajar
                             </a>
                         </li>

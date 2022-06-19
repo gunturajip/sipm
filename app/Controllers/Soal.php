@@ -17,7 +17,7 @@ class Soal extends BaseController
     public function index()
     {
         return view('soal/index', [
-            "title" => "soal",
+            "title" => "Soal",
             "soal" =>  $this->soal->findAll()
         ]);
     }

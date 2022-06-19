@@ -17,7 +17,7 @@ class Bab extends BaseController
     public function index()
     {
         return view('bab/index', [
-            "title" => "bab",
+            "title" => "Bab",
             "bab" =>  $this->bab->findAll()
         ]);
     }

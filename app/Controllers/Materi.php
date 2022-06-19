@@ -17,7 +17,7 @@ class Materi extends BaseController
     public function index()
     {
         return view('materi/index', [
-            "title" => "materi",
+            "title" => "Materi",
             "materi" =>  $this->materi->findAll()
         ]);
     }
