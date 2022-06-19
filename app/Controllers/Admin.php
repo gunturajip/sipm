@@ -2,23 +2,22 @@
 
 namespace App\Controllers;
 
-use App\Models\UserModel;
+use App\Models\AdminModel;
 
-class User extends BaseController
+class Admin extends BaseController
 {
 
-    protected $user;
+    protected $admin;
 
     function __construct()
     {
-        $this->user = new UserModel();
+        $this->admin = new AdminModel();
     }
 
     public function index()
     {
-        return view('user/index', [
+        return view('admin/index', [
             "title" => "User",
-            "user" =>  $this->user->findAll()
         ]);
     }
 

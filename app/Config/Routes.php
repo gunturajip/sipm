@@ -42,6 +42,8 @@ $routes->get('/register', 'Pages::register');
 
 $routes->get('/user', 'User::index');
 
+$routes->get('/admin', 'Admin::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

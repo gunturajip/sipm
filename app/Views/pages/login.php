@@ -1,4 +1,4 @@
-<?= $this->extend('layout/template'); ?>
+<?= $this->extend('layout/template_guest'); ?>
 
 <?= $this->section('content'); ?>
 <div class="container">
@@ -6,7 +6,7 @@
         <div class="col">
             <div class="shadow-sm rounded overflow-hidden p-4">
                 <div class="pb-4 text-center fw-bold fs-3">Selamat Datang Kembali!</div>
-                <form action="" method="post">
+                <form action="<?= base_url("admin") ?>" method="post">
                     <div class="mb-4">
                         <label for="email" class="form-label fw-bold">Alamat Email</label>
                         <input type="email" class="form-control" id="email">

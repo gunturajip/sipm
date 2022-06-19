@@ -1,4 +1,4 @@
-<?= $this->extend('layout/template'); ?>
+<?= $this->extend('layout/template_guest'); ?>
 
 <?= $this->section('content'); ?>
 <div class="container">

@@ -1,4 +1,4 @@
-<?= $this->extend('layout/template'); ?>
+<?= $this->extend('layout/template_guest'); ?>
 
 <?= $this->section('content'); ?>
 <div class="container">
@@ -46,7 +46,7 @@
                 <td><input type="text" id="foto_profil" name="foto_profil" value="<?= $user->foto_profil; ?>"></td>
             </tr>
             <tr>
-                <td colspan="3"><input type="submit"></td>
+                <td colspan="3"><input type="submit" value="Ubah"></td>
             </tr>
         </table>
     </form>

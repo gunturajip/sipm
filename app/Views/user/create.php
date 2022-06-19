@@ -1,4 +1,4 @@
-<?= $this->extend('layout/template'); ?>
+<?= $this->extend('layout/template_guest'); ?>
 
 <?= $this->section('content'); ?>
 <div class="container">
@@ -16,7 +16,7 @@
                 <td><input type="text" id="password" name="password"></td>
             </tr>
             <tr>
-                <td colspan="3"><input type="submit"></td>
+                <td colspan="3"><input type="submit" value="Tambah"></td>
             </tr>
         </table>
     </form>
