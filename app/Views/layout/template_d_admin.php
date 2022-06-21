@@ -51,32 +51,32 @@
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link <?= $title === 'Admin' ? 'bg-primary text-white' : 'active' ?>" href="<?= base_url("admin"); ?>">
-                                <i class="bi bi-house-heart fs-3"></i> Dashboard
+                                <i class="bi bi-house-heart fs-4"></i> Dashboard
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link <?= $title === 'User' ? 'bg-primary text-white' : 'active' ?>" href="<?= base_url("user"); ?>">
-                                <i class="bi bi-people-fill fs-3"></i> User
+                                <i class="bi bi-people-fill fs-4"></i> User
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link <?= $title === 'Bab' ? 'bg-primary text-white' : 'active' ?>" href="<?= base_url("bab"); ?>">
-                                <i class="bi bi-journals fs-3"></i> Bab
+                                <i class="bi bi-journals fs-4"></i> Bab
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link <?= $title === 'Materi' ? 'bg-primary text-white' : 'active' ?>" href="<?= base_url("materi"); ?>">
-                                <i class="bi bi-journal-text fs-3"></i> Materi
+                                <i class="bi bi-journal-text fs-4"></i> Materi
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link <?= $title === 'Soal' ? 'bg-primary text-white' : 'active' ?>" href="<?= base_url("soal"); ?>">
-                                <i class="bi bi-list-task fs-3"></i> Soal
+                                <i class="bi bi-list-task fs-4"></i> Soal
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link <?= $title === 'Rekam Belajar' ? 'bg-primary text-white' : 'active' ?>" href="<?= base_url("rekam_belajar"); ?>">
-                                <i class="bi bi-card-checklist fs-3"></i> Rekam Belajar
+                                <i class="bi bi-card-checklist fs-4"></i> Rekam Belajar
                             </a>
                         </li>
                     </ul>

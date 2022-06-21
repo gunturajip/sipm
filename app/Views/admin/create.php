@@ -1,4 +1,4 @@
-<?= $this->extend('layout/template_auth'); ?>
+<?= $this->extend('layout/template_d_admin'); ?>
 
 <?= $this->section('content'); ?>
 <div class="container">
