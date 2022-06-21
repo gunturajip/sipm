@@ -13,14 +13,33 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-light sticky-top">
         <div class="container justify-content-between">
-            <a class="navbar-brand" href="/">Sima</a>
+            <a class="navbar-brand d-none d-lg-block" href="/">Sima</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="bi bi-list"></i>
             </button>
-            <div>
-                <i class="me-4 bi bi-bell fs-5 hover:btn btn-primary"></i>
-                <i class="me-4 bi bi-gear fs-5 hover:btn btn-primary"></i>
-                <a href="/login" class="text-decoration-none text-black"><i class=" bi bi-person-circle fs-5 hover:btn btn-primary"></i></a>
+            <div id="navbarMenu">
+                <ul class="nav">
+                    <li class="nav-item"><a href="/login" class="nav-link text-black"><i class="bi bi-bell fs-5"></i></a></li>
+                    <li class="nav-item"><a href="/login" class="nav-link text-black"><i class=" bi bi-gear fs-5"></i></a></li>
+                    <li class="nav-item dropdown">
+                        <a href="/" class="nav-link text-black dropdown-toggle" id=" navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle fs-5"></i> Wiro</i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/login"><i class="bi bi-layout-text-sidebar-reverse"></i> My
+                                    Dashboard</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <form action="" method="post">
+                                    <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i>
+                                        Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -28,35 +47,35 @@
     <div class="container-fluid">
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-                <div class="pt-3">
+                <div class="pt-2">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link <?= $title === 'Admin' ? 'mx-2 btn btn-primary text-white' : 'active' ?>" href="<?= base_url("admin"); ?>">
+                            <a class="nav-link <?= $title === 'Admin' ? 'bg-primary text-white' : 'active' ?>" href="<?= base_url("admin"); ?>">
                                 <i class="bi bi-house-heart fs-3"></i> Dashboard
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= $title === 'User' ? 'mx-2 btn btn-primary text-white' : 'active' ?>" href="<?= base_url("user"); ?>">
+                            <a class="nav-link <?= $title === 'User' ? 'bg-primary text-white' : 'active' ?>" href="<?= base_url("user"); ?>">
                                 <i class="bi bi-people-fill fs-3"></i> User
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= $title === 'Bab' ? 'mx-2 btn btn-primary text-white' : 'active' ?>" href="<?= base_url("bab"); ?>">
+                            <a class="nav-link <?= $title === 'Bab' ? 'bg-primary text-white' : 'active' ?>" href="<?= base_url("bab"); ?>">
                                 <i class="bi bi-journals fs-3"></i> Bab
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= $title === 'Materi' ? 'mx-2 btn btn-primary text-white' : 'active' ?>" href="<?= base_url("materi"); ?>">
+                            <a class="nav-link <?= $title === 'Materi' ? 'bg-primary text-white' : 'active' ?>" href="<?= base_url("materi"); ?>">
                                 <i class="bi bi-journal-text fs-3"></i> Materi
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= $title === 'Soal' ? 'mx-2 btn btn-primary text-white' : 'active' ?>" href="<?= base_url("soal"); ?>">
+                            <a class="nav-link <?= $title === 'Soal' ? 'bg-primary text-white' : 'active' ?>" href="<?= base_url("soal"); ?>">
                                 <i class="bi bi-list-task fs-3"></i> Soal
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= $title === 'Rekam Belajar' ? 'mx-2 btn btn-primary text-white' : 'active' ?>" href="<?= base_url("rekam_belajar"); ?>">
+                            <a class="nav-link <?= $title === 'Rekam Belajar' ? 'bg-primary text-white' : 'active' ?>" href="<?= base_url("rekam_belajar"); ?>">
                                 <i class="bi bi-card-checklist fs-3"></i> Rekam Belajar
                             </a>
                         </li>
