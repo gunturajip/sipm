@@ -8,26 +8,34 @@ use App\Models\SoalModel;
 class Belajar extends BaseController
 {
 
-    protected $materiBelajar;
-    protected $soalBelajar;
+    protected $materi;
 
     function __construct()
     {
-        $this->materiBelajar = new MateriModel();
-        $this->soalBelajar = new SoalModel();
+        $this->materi = new MateriModel();
+        $this->soal = new SoalModel();
+    }
+
+    public function index()
+    {
+        return view('belajar/index', [
+            "title" => "Belajar",
+            "materi" => $this->materi->findAll(),
+            "soal" => $this->soal->findAll()
+        ]);
     }
 
     public function soal()
     {
         return view('belajar/soalBelajar', [
-            "title" => "Belajar"
+            "title" => "Soal Belajar"
         ]);
     }
 
     public function materi()
     {
         return view('belajar/materiBelajar', [
-            "title" => "Materi"
+            "title" => "Materi Belajar"
         ]);
     }
 }

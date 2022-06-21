@@ -12,7 +12,7 @@
 <body>
     <header class="py-2 bg-light fixed-top border-bottom">
         <div class="container-md d-flex flex-wrap justify-content-between">
-            <a href="/" class="d-flex align-items-center col-md-3 text-dark text-decoration-none">
+            <a href="<?= base_url("belajar"); ?>" class="d-flex align-items-center col-md-3 text-dark text-decoration-none">
                 <span class="fs-4">Sima</span>
             </a>
             <ul class="pagination d-flex col-md-auto justify-content-center align-items-center m-0">
