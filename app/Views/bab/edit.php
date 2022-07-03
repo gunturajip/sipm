@@ -12,7 +12,7 @@
                 <input type="hidden" id="id" name="id" value="<?= $bab->id; ?>">
             </tr>
             <tr>
-                <td>ID Admin </td>
+                <td>ID Kelas </td>
                 <td>:</td>
                 <td><input type="number" id="kelas_id" name="kelas_id" value="<?= $bab->kelas_id; ?>"></td>
             </tr>
