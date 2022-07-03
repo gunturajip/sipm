@@ -2,8 +2,8 @@
 
 <?= $this->section('content'); ?>
 <div class="container">
-    <b>Tambah Data Bab</b>
-    <form action="<?= base_url("bab/insert") ?>" method="post">
+    <b>Tambah Data Kelas</b>
+    <form action="<?= base_url("kelas/insert") ?>" method="post">
         <table>
             <tr>
                 <td>Nama </td>
@@ -13,7 +13,7 @@
             <tr>
                 <td>ID Admin </td>
                 <td>:</td>
-                <td><input type="number" id="kelas_id" name="kelas_id"></td>
+                <td><input type="number" id="admin_id" name="admin_id"></td>
             </tr>
             <tr>
                 <td colspan="3"><input type="submit" value="Tambah"></td>

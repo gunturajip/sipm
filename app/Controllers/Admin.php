@@ -62,4 +62,11 @@ class Admin extends BaseController
         ]);
         return redirect()->to('/admin');
     }
+
+    public function setting()
+    {
+        return view('admin/setting', [
+            "title" => "Setting"
+        ]);
+    }
 }

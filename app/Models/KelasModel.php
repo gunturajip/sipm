@@ -4,11 +4,11 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class BabModel extends Model
+class KelasModel extends Model
 {
-    protected $table = "bab";
+    protected $table = "kelas";
     protected $primaryKey = "id";
     protected $returnType = "object";
     protected $useAutoIncrement = true;
-    protected $allowedFields = ["nama", "kelas_id"];
+    protected $allowedFields = ["nama", "admin_id"];
 }

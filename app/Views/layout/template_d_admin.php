@@ -60,6 +60,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link <?= $title === 'Kelas' ? 'bg-primary text-white' : 'active' ?>" href="<?= base_url("kelas"); ?>">
+                                <i class="bi bi-journals fs-4"></i> Kelas
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link <?= $title === 'Bab' ? 'bg-primary text-white' : 'active' ?>" href="<?= base_url("bab"); ?>">
                                 <i class="bi bi-journals fs-4"></i> Bab
                             </a>

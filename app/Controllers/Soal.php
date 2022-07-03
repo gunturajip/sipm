@@ -33,8 +33,10 @@ class Soal extends BaseController
     {
         $this->soal->insert([
             'deskripsi' => $this->request->getPost('deskripsi'),
+            'link_soal' => $this->request->getPost('link_soal'),
             'jawaban' => $this->request->getPost('jawaban'),
-            'link' => $this->request->getPost('link'),
+            'link_jawaban' => $this->request->getPost('link_jawaban'),
+            'kunci_jawaban' => $this->request->getPost('kunci_jawaban'),
             'materi_id' => $this->request->getPost('materi_id')
         ]);
         return redirect()->to('/soal');
@@ -58,8 +60,10 @@ class Soal extends BaseController
     {
         $this->soal->update($id, [
             'deskripsi' => $this->request->getPost('deskripsi'),
+            'link_soal' => $this->request->getPost('link_soal'),
             'jawaban' => $this->request->getPost('jawaban'),
-            'link' => $this->request->getPost('link'),
+            'link_jawaban' => $this->request->getPost('link_jawaban'),
+            'kunci_jawaban' => $this->request->getPost('kunci_jawaban'),
             'materi_id' => $this->request->getPost('materi_id')
         ]);
         return redirect()->to('/soal');

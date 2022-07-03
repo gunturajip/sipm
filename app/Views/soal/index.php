@@ -4,7 +4,7 @@
 <?php
 foreach ($soal as $row) {
   $id_soal[] = $row->id;
-  $materi_soal[] = $row->materi_id;
+  $jawaban_soal[] = $row->kunci_jawaban;
 }
 ?>
 
@@ -15,8 +15,10 @@ foreach ($soal as $row) {
     <tr>
       <th>No</th>
       <th>Deskripsi</th>
+      <th>Link Soal</th>
       <th>Jawaban</th>
-      <th>Link</th>
+      <th>Link Jawaban</th>
+      <th>Kunci Jawaban</th>
       <th>ID Materi</th>
       <th>Aksi</th>
     </tr>
@@ -26,8 +28,10 @@ foreach ($soal as $row) {
       <tr>
         <td><?= $row->id; ?></td>
         <td><?= $row->deskripsi; ?></td>
+        <td><?= $row->link_soal; ?></td>
         <td><?= $row->jawaban; ?></td>
-        <td><?= $row->link; ?></td>
+        <td><?= $row->link_jawaban; ?></td>
+        <td><?= $row->kunci_jawaban; ?></td>
         <td><?= $row->materi_id; ?></td>
         <td>
           <a title="Edit" href="<?= base_url("soal/edit/$row->id"); ?>" class="btn btn-primary"><i class="bi bi-pencil"></i></a>
@@ -67,9 +71,9 @@ foreach ($soal as $row) {
   </div>
 </div>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script> -->
-<!-- <script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+<script>
   /* globals Chart:false, feather:false */
 
   (function() {
@@ -85,12 +89,10 @@ foreach ($soal as $row) {
     var lineChart = new Chart(linectx, {
       type: 'line',
       data: {
-        labels: <?php //json_encode($materi_soal); 
-                ?>,
+        labels: <?= json_encode($jawaban_soal); ?>,
         datasets: [{
           label: 'ID Soal',
-          data: <?php //json_encode($id_soal); 
-                ?>,
+          data: <?= json_encode($id_soal); ?>,
           backgroundColor: "hsl(252, 82.9%, 67.8%)",
           borderColor: "hsl(252, 82.9%, 67.8%)"
         }]
@@ -104,12 +106,10 @@ foreach ($soal as $row) {
     var barChart = new Chart(barctx, {
       type: 'bar',
       data: {
-        labels: <?php //json_encode($materi_soal); 
-                ?>,
+        labels: <?= json_encode($jawaban_soal); ?>,
         datasets: [{
           label: 'ID Soal',
-          data: <?php //json_encode($id_soal); 
-                ?>,
+          data: <?= json_encode($id_soal); ?>,
           backgroundColor: "hsl(252, 82.9%, 67.8%)",
           borderColor: "hsl(252, 82.9%, 67.8%)"
         }]
@@ -123,12 +123,10 @@ foreach ($soal as $row) {
     var pieChart = new Chart(piectx, {
       type: 'pie',
       data: {
-        labels: <?php //json_encode($materi_soal); 
-                ?>,
+        labels: <?= json_encode($jawaban_soal); ?>,
         datasets: [{
           label: 'ID Soal',
-          data: <?php //json_encode($id_soal); 
-                ?>,
+          data: <?= json_encode($id_soal); ?>,
           backgroundColor: [
             "rgb(101, 143, 241)",
             "rgb(164, 101, 241)"
@@ -145,12 +143,10 @@ foreach ($soal as $row) {
     var doughnutChart = new Chart(doughnutctx, {
       type: 'doughnut',
       data: {
-        labels: <?php //json_encode($materi_soal); 
-                ?>,
+        labels: <?= json_encode($jawaban_soal); ?>,
         datasets: [{
           label: 'ID Soal',
-          data: <?php //json_encode($id_soal); 
-                ?>,
+          data: <?= json_encode($id_soal); ?>,
           backgroundColor: [
             "rgb(101, 143, 241)",
             "rgb(164, 101, 241)"
@@ -161,5 +157,5 @@ foreach ($soal as $row) {
       options: {}
     })
   })()
-</script> -->
+</script>
 <?= $this->endSection(); ?>

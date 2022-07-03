@@ -10,5 +10,5 @@ class SoalModel extends Model
     protected $primaryKey = "id";
     protected $returnType = "object";
     protected $useAutoIncrement = true;
-    protected $allowedFields = ["deskripsi", "jawaban", "link", "materi_id"];
+    protected $allowedFields = ["deskripsi", "link_soal", "jawaban", "link_jawaban", "kunci_jawaban", "materi_id"];
 }

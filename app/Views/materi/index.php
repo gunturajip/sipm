@@ -67,9 +67,9 @@ foreach ($materi as $row) {
   </div>
 </div>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script> -->
-<!-- <script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+<script>
   /* globals Chart:false, feather:false */
 
   (function() {
@@ -85,12 +85,10 @@ foreach ($materi as $row) {
     var lineChart = new Chart(linectx, {
       type: 'line',
       data: {
-        labels: <?php //json_encode($judul_materi); 
-                ?>,
+        labels: <?= json_encode($judul_materi); ?>,
         datasets: [{
           label: 'ID Materi',
-          data: <?php //json_encode($id_materi); 
-                ?>,
+          data: <?= json_encode($id_materi); ?>,
           backgroundColor: "hsl(252, 82.9%, 67.8%)",
           borderColor: "hsl(252, 82.9%, 67.8%)"
         }]
@@ -104,12 +102,10 @@ foreach ($materi as $row) {
     var barChart = new Chart(barctx, {
       type: 'bar',
       data: {
-        labels: <?php //json_encode($judul_materi); 
-                ?>,
+        labels: <?= json_encode($judul_materi); ?>,
         datasets: [{
           label: 'ID Materi',
-          data: <?php //json_encode($id_materi); 
-                ?>,
+          data: <?= json_encode($id_materi); ?>,
           backgroundColor: "hsl(252, 82.9%, 67.8%)",
           borderColor: "hsl(252, 82.9%, 67.8%)"
         }]
@@ -123,12 +119,10 @@ foreach ($materi as $row) {
     var pieChart = new Chart(piectx, {
       type: 'pie',
       data: {
-        labels: <?php //json_encode($judul_materi); 
-                ?>,
+        labels: <?= json_encode($judul_materi); ?>,
         datasets: [{
           label: 'ID Materi',
-          data: <?php //json_encode($id_materi); 
-                ?>,
+          data: <?= json_encode($id_materi); ?>,
           backgroundColor: [
             "rgb(101, 143, 241)",
             "rgb(164, 101, 241)"
@@ -145,12 +139,10 @@ foreach ($materi as $row) {
     var doughnutChart = new Chart(doughnutctx, {
       type: 'doughnut',
       data: {
-        labels: <?php //json_encode($judul_materi); 
-                ?>,
+        labels: <?= json_encode($judul_materi); ?>,
         datasets: [{
           label: 'ID Materi',
-          data: <?php //json_encode($id_materi); 
-                ?>,
+          data: <?= json_encode($id_materi); ?>,
           backgroundColor: [
             "rgb(101, 143, 241)",
             "rgb(164, 101, 241)"
@@ -161,5 +153,5 @@ foreach ($materi as $row) {
       options: {}
     })
   })()
-</script> -->
+</script>
 <?= $this->endSection(); ?>

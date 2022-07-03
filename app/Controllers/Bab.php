@@ -33,7 +33,7 @@ class Bab extends BaseController
     {
         $this->bab->insert([
             'nama' => $this->request->getPost('nama'),
-            'admin_id' => $this->request->getPost('admin_id')
+            'kelas_id' => $this->request->getPost('kelas_id')
         ]);
         return redirect()->to('/bab');
     }
@@ -56,7 +56,7 @@ class Bab extends BaseController
     {
         $this->bab->update($id, [
             'nama' => $this->request->getPost('nama'),
-            'admin_id' => $this->request->getPost('admin_id')
+            'kelas_id' => $this->request->getPost('kelas_id')
         ]);
         return redirect()->to('/bab');
     }

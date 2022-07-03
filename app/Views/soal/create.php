@@ -11,14 +11,24 @@
                 <td><input type="text" id="deskripsi" name="deskripsi"></td>
             </tr>
             <tr>
+                <td>Link Soal </td>
+                <td>:</td>
+                <td><input type="text" id="link_soal" name="link_soal"></td>
+            </tr>
+            <tr>
                 <td>Jawaban </td>
                 <td>:</td>
                 <td><input type="text" id="jawaban" name="jawaban"></td>
             </tr>
             <tr>
-                <td>Link </td>
+                <td>Link Jawaban </td>
                 <td>:</td>
-                <td><input type="text" id="link" name="link"></td>
+                <td><input type="text" id="link_jawaban" name="link_jawaban"></td>
+            </tr>
+            <tr>
+                <td>Kunci Jawaban </td>
+                <td>:</td>
+                <td><input type="text" id="kunci_jawaban" name="kunci_jawaban"></td>
             </tr>
             <tr>
                 <td>ID Materi </td>
