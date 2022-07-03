@@ -26,7 +26,7 @@
                             <i class="bi bi-person-circle fs-5"></i> Wiro</i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/login"><i class="bi bi-layout-text-sidebar-reverse"></i> My
+                            <li><a class="dropdown-item" href="<?= base_url("admin/setting"); ?>"><i class="bi bi-layout-text-sidebar-reverse"></i> My
                                     Dashboard</a></li>
                             <li>
                                 <hr class="dropdown-divider">

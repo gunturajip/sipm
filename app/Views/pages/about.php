@@ -10,7 +10,7 @@
         <h2 class="display-9">Sima</h2>
         <p class=" text-muted ">Sima adalah sistem informasi pembelajaran matematika yang dikhususkan untuk anak sekolah dasar. Media pembelajaran berbasis website ini sangat tepat karena menggunakan sistem pembelajaran yang memuat berbagai media seperti teks, gambar, animasi, e-book digital, dan pendidik juga dapat menyajikan materi pembelajaran yang lebih menarik, tidak monoton serta memudahkan penyampaian kepada peserta didik.</p>
       </div>
-      <div class="col-lg-6 d-none d-lg-block px-5"><img src="<?= base_url("img/math.png"); ?>" alt="" class="img-fluid"></div>
+      <div class="col-lg-6 d-block d-lg-block px-5"><img src="<?= base_url("img/math.png"); ?>" alt="" class="img-fluid"></div>
     </div>
   </div>
 </div>

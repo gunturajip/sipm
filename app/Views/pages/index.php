@@ -17,9 +17,7 @@
                 </p>
                 <a href="" class="btn btn-secondary py-2 px-4 mb-5">Get Started</a>
             </div>
-            <div class="col-lg-6 text-center text-lg-end">
-                <img class="img-fluid p-5 m-5" src="<?= base_url("img/math.png"); ?>" alt="" />
-            </div>
+            <div class="col-lg-6 d-block d-lg-block px-5"><img src="<?= base_url("img/math.png"); ?>" alt="" class="img-fluid"></div>
         </div>
     </div>
 </div>

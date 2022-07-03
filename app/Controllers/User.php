@@ -64,4 +64,11 @@ class User extends BaseController
         ]);
         return redirect()->to('/user');
     }
+
+    public function setting()
+    {
+        return view('user/setting', [
+            "title" => "Setting"
+        ]);
+    }
 }
