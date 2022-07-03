@@ -33,7 +33,7 @@ class Admin extends BaseController
     {
         $this->admin->insert([
             'email' => $this->request->getPost('email'),
-            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT)
+            'password' => password_hash($this->request->getPost('password'), PASSWORD_BCRYPT)
         ]);
         return redirect()->to('/admin');
     }
@@ -57,7 +57,7 @@ class Admin extends BaseController
         $this->admin->update($id, [
             'nama' => $this->request->getPost('nama'),
             'email' => $this->request->getPost('email'),
-            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+            'password' => password_hash($this->request->getPost('password'), PASSWORD_BCRYPT),
             'foto_profil' => $this->request->getPost('foto_profil')
         ]);
         return redirect()->to('/admin');

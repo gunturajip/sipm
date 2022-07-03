@@ -18,7 +18,9 @@ class Materi extends BaseController
     {
         return view('materi/index', [
             "title" => "Materi",
-            "materi" =>  $this->materi->findAll()
+            "materi" =>  $this->materi->findAll(),
+            // "spesifikMateri" => $this->materi->where_in('bab_id', 2),
+            "spesifikMateri" =>  $this->materi->where('id', '2')->first()
         ]);
     }
 

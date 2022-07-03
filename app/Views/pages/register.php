@@ -6,6 +6,16 @@
         <div class="col">
             <div class="shadow-sm rounded overflow-hidden p-4">
                 <div class="pb-4 text-center fw-bold fs-3">Buat Akun Gratismu untuk Tingkatkan Skill Matematikamu</div>
+                <?php
+                if (session()->has('notFound')) {
+                ?>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <?= session('notFound'); ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php
+                }
+                ?>
                 <form action="<?= base_url("belajar") ?>" method="post">
                     <div class="mb-4">
                         <label for="email" class="form-label fw-bold">Alamat Email</label>

@@ -11,6 +11,14 @@ foreach ($materi as $row) {
 <div class="container">
   <a href="<?= base_url("materi/create"); ?>" class="my-4 btn btn-primary"><i class="bi bi-plus-square"></i> Materi</a>
 
+  <?php
+  foreach ($spesifikMateri as $wor) {
+  ?>
+    <h1><?= $wor->id; ?></h1>
+  <?php
+  }
+  ?>
+
   <table class="table table-striped table-hover shadow rounded overflow-hidden ">
     <tr>
       <th>No</th>

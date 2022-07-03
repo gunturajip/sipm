@@ -33,7 +33,7 @@ class User extends BaseController
     {
         $this->user->insert([
             'email' => $this->request->getPost('email'),
-            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT)
+            'password' => password_hash($this->request->getPost('password'), PASSWORD_BCRYPT)
         ]);
         return redirect()->to('/user');
     }
@@ -57,7 +57,7 @@ class User extends BaseController
         $this->user->update($id, [
             'nama' => $this->request->getPost('nama'),
             'email' => $this->request->getPost('email'),
-            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+            'password' => password_hash($this->request->getPost('password'), PASSWORD_BCRYPT),
             'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
             'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
             'foto_profil' => $this->request->getPost('foto_profil')

@@ -26,7 +26,7 @@
                             <i class="bi bi-person-circle fs-5"></i> Samsul</i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="<?= base_url("user/setting"); ?>"><i class="bi bi-layout-text-sidebar-reverse"></i> My
+                            <li><a class="dropdown-item" href="/login"><i class="bi bi-layout-text-sidebar-reverse"></i> My
                                     Dashboard</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -45,27 +45,9 @@
     </nav>
 
     <div class="container-fluid">
-        <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-                <div class="pt-2">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link <?= $title === 'Materi Belajar' ? 'bg-primary text-white' : 'active' ?>" href="<?= base_url("belajar/materi"); ?>">
-                                <i class="bi bi-journal-text fs-4"></i> Materi
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link <?= $title === 'Soal Belajar' ? 'bg-primary text-white' : 'active' ?>" href="<?= base_url("belajar/soal"); ?>">
-                                <i class="bi bi-list-task fs-4"></i> Soal
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <?= $this->renderSection('content'); ?>
-            </main>
+        <div class="container">
+            <a href="" class="btn btn-secondary mt-3 mb-4"><i class="bi bi-chevron-compact-left"></i>Kembali</a>
+            <?= $this->renderSection('content'); ?>
         </div>
     </div>
 
